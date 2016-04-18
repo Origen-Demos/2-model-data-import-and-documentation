@@ -36,6 +36,13 @@ class ATDTestApplication < Origen::Application
 
   config.semantically_version = true
 
+  def after_web_site_compile(options)
+    # Build the model documentation
+    OrigenDocHelpers.generate_model_docs layout: "#{Origen.root}/templates/web/layouts/_basic.html.erb", tab: :model do |d|
+      d.page model: $dut
+    end
+  end
+
   # An example of how to set application specific LSF parameters
   #config.lsf.project = "msg.te"
   

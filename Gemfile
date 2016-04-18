@@ -13,3 +13,5 @@ gem 'byebug', '~>3.5'
 gem "origen_nexus", ">= 0.8.0"
 gem "origen_arm_debug", ">= 0.4.3"
 gem "origen_swd", ">= 0.5.0"
+
+gem "cross_origen"
